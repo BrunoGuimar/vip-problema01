@@ -14,9 +14,9 @@ casas decimais que foi passado por parâmetro para este método.
 # CheckList
 
 Desenvolva uma classe cujo construtor receba uma string que representa um valor
-monetário  [ ]
+monetário  [ X ]
 
-Contruir método que não recebe parâmetros e retorne o valor passado ao construtor em um float. [ ]
+Contruir método que não recebe parâmetros e retorne o valor passado ao construtor em um float. [ X ]
 
-Construir método que recebe o tipo e o separador de casas decimais e retorna uma string semelhante a que foi passada ao construtor, porém com o tipo e o separador de casas decimais que foi passado por parâmetro. [ ]
+Construir método que recebe o tipo e o separador de casas decimais e retorna uma string semelhante a que foi passada ao construtor, porém com o tipo e o separador de casas decimais que foi passado por parâmetro. [ X ]
 
