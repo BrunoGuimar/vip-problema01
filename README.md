@@ -32,8 +32,11 @@ git clone git@github.com:BrunoGuimar/vip-problema01.git
 ```
 cd vip-problema01/src
 ```
-3. Execute a aplicação:
-
+3. Instale pytest para realização dos testes:
+```
+pip install pytest
+```
+4. Execute a aplicação:
 ```
 python main.py
 ```
