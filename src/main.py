@@ -6,7 +6,7 @@ class Moeda:
 
     # Retorna a string formatada {valor} no tipo float
     def get_valor(self):
-        valor_formatado = self._valor.replace(",", "").replace(".", "").replace("R$", "").replace("$", "").strip()
+        valor_formatado = self._formatar_moeda(self._valor).replace(",", "").replace(".", "").strip()
         return float(int(valor_formatado) / 100)
 
     # Recebe o tipo e caractere da moeda, substituindo pelos valores passados no parâmetro da função
@@ -16,7 +16,7 @@ class Moeda:
 
     # Função privada responsável por formatar a moeda de acordo com os caracteres e o tipo informado
     # Implementada em casos mais flexíveis de valores
-    def _formatar_moeda(self, tipo_moeda, caractere):
+    def _formatar_moeda(self, tipo_moeda="", caractere=""):
         moeda_formatada = self._valor.replace("R$", "").replace("$", "")
         if tipo_moeda == "R$":  # "," VIRA "." - CASA DECIMAL == ","
             moeda_formatada = moeda_formatada.replace(",", ".")
@@ -24,3 +24,4 @@ class Moeda:
         if tipo_moeda == "$":  # "." VIRA "," - CASA DECIMAL == "."
             moeda_formatada = moeda_formatada.replace(".", ",")
             return f"{tipo_moeda}{moeda_formatada[:len(moeda_formatada) - 3]}{caractere}{moeda_formatada[len(moeda_formatada) - 2:]}"
+        return moeda_formatada
