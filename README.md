@@ -20,3 +20,23 @@ Contruir método que não recebe parâmetros e retorne o valor passado ao constr
 
 Construir método que recebe o tipo e o separador de casas decimais e retorna uma string semelhante a que foi passada ao construtor, porém com o tipo e o separador de casas decimais que foi passado por parâmetro. [ X ]
 
+# Instalação do projeto
+
+Siga esses passos para instalar e executar o projeto:
+
+1. Clone o repositório:
+```
+git clone git@github.com:BrunoGuimar/vip-problema01.git
+```
+2. Acesse o diretório do projeto:
+```
+cd vip-problema01
+```
+4. Execute a aplicação:
+
+```
+python main.py
+```
+
+
+
