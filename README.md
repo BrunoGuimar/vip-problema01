@@ -30,13 +30,10 @@ git clone git@github.com:BrunoGuimar/vip-problema01.git
 ```
 2. Acesse o diretório do projeto:
 ```
-cd src/vip-problema01
+cd vip-problema01/src
 ```
-4. Execute a aplicação:
+3. Execute a aplicação:
 
 ```
 python main.py
 ```
-
-
-
