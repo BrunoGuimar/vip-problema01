@@ -7,13 +7,20 @@ class Moeda:
     # Retorna a string formatada {valor} no tipo float
     def get_valor(self):
         valor_formatado = self.valor.replace(",", "").replace(".", "").replace("R$", "").replace("$", "").strip()
-        return float(int(valor_formatado)/100)
+        return float(int(valor_formatado) / 100)
 
-    # Recebe o tipo e caractere da moeda, substituindo pelos valores passado pelo parâmetro da função
+    # Recebe o tipo e caractere da moeda, substituindo pelos valores passados no parâmetro da função
     def alterar_moeda(self, tipo_moeda, caractere):
-        moeda_aux = self.valor.replace("R$", "").replace("$", "").strip()
-        moeda_final = f"{tipo_moeda} {moeda_aux.replace('.', f'{caractere}').replace(',', f'{caractere}')}"
-        return moeda_final
+        moeda_alterada = self._formatar_moeda(tipo_moeda, caractere)
+        return f"{moeda_alterada}"
 
-
-
+    # Função privada responsável por formatar a moeda de acordo com os caracteres e o tipo informado
+    # Implementada em casos mais flexíveis de valores
+    def _formatar_moeda(self, tipo_moeda, caractere):
+        moeda_formatada = self.valor.replace("R$", "").replace("$", "")
+        if tipo_moeda == "R$":  # "," VIRA "." - CASA DECIMAL == ","
+            moeda_formatada = moeda_formatada.replace(",", ".")
+            return f"{tipo_moeda}{moeda_formatada[:len(moeda_formatada) - 3]}{caractere}{moeda_formatada[len(moeda_formatada) - 2:]}"
+        if tipo_moeda == "$":  # "." VIRA "," - CASA DECIMAL == "."
+            moeda_formatada = moeda_formatada.replace(".", ",")
+            return f"{tipo_moeda}{moeda_formatada[:len(moeda_formatada) - 3]}{caractere}{moeda_formatada[len(moeda_formatada) - 2:]}"
