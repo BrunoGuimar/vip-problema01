@@ -30,7 +30,7 @@ git clone git@github.com:BrunoGuimar/vip-problema01.git
 ```
 2. Acesse o diretório do projeto:
 ```
-cd vip-problema01
+cd src/vip-problema01
 ```
 4. Execute a aplicação:
 
